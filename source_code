@@ -1,0 +1,14 @@
+#Sort the following list of dates from oldest to newest and print the list:
+#from operator import itemgetter, attrgetter
+import datetime
+
+test_21_dates = ["21 February 1875", "24 September 1880", "21 April 2018",
+         "21 March 1993", "29 August 1880", "10 March 1900", "29 November 1899",
+         "22 July 2018", "1 April 2015", "14 September 1889", "12 May 2016",
+         "6 April 2015", "12 July 1995", "2 January 1903", "15 August 1890",
+         "26 August 1896", "20 March 1903", "29 October 1901", "30 May 1902",
+         "23 May 1899", "19 January 1998", "4 April 1897"]
+
+test_21_dates_results = sorted(dates, key=lambda x: datetime.datetime.strptime(x, '%d %B %Y'))
+
+print(test_21_dates_results)
